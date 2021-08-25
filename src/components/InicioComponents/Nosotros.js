@@ -12,7 +12,7 @@ const Nosotros = () => {
             </div>
             <div className="col-md-6 col-12 text-center pt-3 pl-2">
                 <img className="d-none d-md-inline-block" src={image} style={{ height: '300px' }} alt="Nosotros" />
-                <img className="d-none d-md-inline-block" src={image} style={{ height: '200px' }} alt="Nosotros" />
+                <img className="d-md-none d-inline-block" src={image} style={{ height: '200px' }} alt="Nosotros" />
             </div>
         </div>
     )
