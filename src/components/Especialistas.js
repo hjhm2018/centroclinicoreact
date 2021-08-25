@@ -13,12 +13,12 @@ const Especialistas = () => {
             <div className="col-12">
                 <h2 className="text-center bg-info text-white rounded p-2">Especialistas</h2>
             </div>
-            <div className="col-10 mx-auto d-flex justify-content-center">
-                <div className="form-group col-md-6 col-12 mx-auto">
+            <div className="col-12 mx-auto d-flex justify-content-center flex-wrap">
+                <div className="col-md-6 col-12 mx-auto p-2">
                     <input type="text" className="text-center form-control"
                         placeholder="Filtrar por nombre" onChange={(e) => setNombre(e.target.value.toLowerCase())} />
                 </div>
-                <div className="form-group col-md-6 col-12">
+                <div className="col-md-6 col-12 p-2">
                     <select className="form-control" onChange={(e) => setEspecialidad(e.target.value.toLowerCase())}>
                         <option value="">Filtrar por Especialidad</option>
                         {especialidades.sort(function (a, b) {
