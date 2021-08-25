@@ -14,11 +14,11 @@ const Especialistas = () => {
                 <h2 className="text-center bg-info text-white rounded p-2">Especialistas</h2>
             </div>
             <div className="col-10 mx-auto d-flex justify-content-center">
-                <div className="form-group col-md-6 mx-auto">
+                <div className="form-group col-md-6 col-12 mx-auto">
                     <input type="text" className="text-center form-control"
                         placeholder="Filtrar por nombre" onChange={(e) => setNombre(e.target.value.toLowerCase())} />
                 </div>
-                <div className="form-group col-md-6">
+                <div className="form-group col-md-6 col-12">
                     <select className="form-control" onChange={(e) => setEspecialidad(e.target.value.toLowerCase())}>
                         <option value="">Filtrar por Especialidad</option>
                         {especialidades.sort(function (a, b) {
