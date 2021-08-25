@@ -10,8 +10,14 @@ const Galeria = () => {
 
                     <Carousel.Item key={index}>
                         <img
-                            className="d-block w-100"
+                            className="d-none d-md-block w-100"
                             height={500}
+                            src={especialidad.imagen}
+                            alt={`foto-${especialidad.especialidad}`}
+                        />
+                        <img
+                            className="d-block d-md-none w-100"
+                            height={300}
                             src={especialidad.imagen}
                             alt={`foto-${especialidad.especialidad}`}
                         />
