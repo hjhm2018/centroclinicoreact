@@ -21,7 +21,7 @@ const Navigationbar = () => {
                         <Nav.Link eventKey={2} as={Link} to='/' className="border border-info text-info rounded text-center mr-1" >Inicio</Nav.Link>
                         {location.pathname === '/' && (
                             <>
-                                <AnchorLink href="#nosotros" className="border border-info text-info rounded text-center mr-1 p-2">Nosotros</AnchorLink>
+                                <Nav.Link eventKey={2} as={AnchorLink} href="#nosotros" className="nav-link border border-info text-info rounded text-center mr-1 p-2">Nosotros</Nav.Link>
                             </>
                         )}
                         {location.pathname !== '/' && (
@@ -33,8 +33,8 @@ const Navigationbar = () => {
                         <Nav.Link eventKey={2} as={Link} to='/especialistas' className="border border-info text-info rounded text-center mr-1">Especialistas</Nav.Link>
                         {location.pathname === '/' && (
                             <>
-                                <AnchorLink href="#formulario" className="border border-info text-info rounded text-center mr-1 p-2">Contacto</AnchorLink>
-                                <AnchorLink href="#ubicacion" className="border border-info text-info rounded text-center mr-1 p-2">Ubicación</AnchorLink>
+                                <Nav.Link eventKey={2} as={AnchorLink} href="#formulario" className="nav-link border border-info text-info rounded text-center mr-1 p-2">Contacto</Nav.Link>
+                                <Nav.Link eventKey={2} as={AnchorLink} href="#ubicacion" className="nav-link border border-info text-info rounded text-center mr-1 p-2">Ubicación</Nav.Link>
                             </>
                         )}
                         {location.pathname !== '/' && (
