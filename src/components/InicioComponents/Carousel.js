@@ -1,10 +1,21 @@
 import React from 'react';
 import especialidades from '../../data/especialidades';
 import Carousel from 'react-bootstrap/Carousel';
+import { useLocation } from 'react-router-dom';
+
 
 const Galeria = () => {
+    const location = useLocation();
+
     return (
-        <div className="col-lg-10 mx-auto">
+        <div className="col-lg-10 mb-2 mx-auto">
+            {
+                location.pathname === '/' && (
+                    <>
+                        <div className="d-block d-md-none" id="nosotros"></div>
+                    </>
+                )
+            }
             <Carousel>
                 {especialidades && especialidades.map((especialidad, index) => (
 

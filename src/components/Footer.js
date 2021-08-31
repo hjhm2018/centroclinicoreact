@@ -1,13 +1,10 @@
 import React from 'react';
 import { FaInstagram } from "react-icons/fa";
 import imagen from '../imagenes/logo.png'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { Nav } from 'react-bootstrap';
-import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Footer = () => {
-
-    const location = useLocation();
 
     return (
         <div className="row mt-4">
@@ -22,32 +19,13 @@ const Footer = () => {
                     <div className="col-12 col-md-8 col-lg-6 pl-md-5 pl-0">
 
                         <Nav.Link as={Link} to='/' className="d-block text-white font-weight-bold pb-3" >Inicio</Nav.Link>
-                        {location.pathname === '/' && (
-                            <>
-                                <AnchorLink href="#nosotros" className="d-block text-white font-weight-bold px-3 pb-3">Nosotros</AnchorLink>
-                            </>
-                        )}
-                        {location.pathname !== '/' && (
-                            <>
-                                <Nav.Link eventKey={2} as={Link} to='/nosotros' className="d-block text-white font-weight-bold pb-3">Nosotros</Nav.Link>
-                            </>
-                        )}
+                        <Nav.Link eventKey={2} as={Link} to='/nosotros' className="d-block text-white font-weight-bold pb-3">Nosotros</Nav.Link>
                         <Nav.Link as={Link} to='/especialidades' className="d-block text-white font-weight-bold pb-3"
                         >Especialidades</Nav.Link>
                         <Nav.Link as={Link} to='/especialistas' className="d-block text-white font-weight-bold pb-3"
                         >Especialistas</Nav.Link>
-                        {location.pathname === '/' && (
-                            <>
-                                <AnchorLink href="#formulario" className="d-block text-white font-weight-bold px-3">Contacto</AnchorLink>
-                                <AnchorLink href="#ubicacion" className="d-block text-white font-weight-bold p-3">Ubicación</AnchorLink>
-                            </>
-                        )}
-                        {location.pathname !== '/' && (
-                            <>
-                                <Nav.Link eventKey={2} as={Link} to='/contacto' className="text-white font-weight-bold p-3">Contacto</Nav.Link>
-                                <Nav.Link eventKey={2} as={Link} to='/ubicacion' className="text-white font-weight-bold p-3">Ubicación</Nav.Link>
-                            </>
-                        )}
+                        <Nav.Link eventKey={2} as={Link} to='/contacto' className="text-white font-weight-bold p-3">Contacto</Nav.Link>
+                        <Nav.Link eventKey={2} as={Link} to='/ubicacion' className="text-white font-weight-bold p-3">Ubicación</Nav.Link>
                     </div>
                 </div>
                 <div className="col-12 col-md-6 pl-4 pt-3">

@@ -3,8 +3,8 @@ import { FaInstagram } from "react-icons/fa";
 
 const Ubicacion = () => {
     return (
-        <div id="ubicacion" className="row mt-5">
-            <div className="col-12 col-md-6 ml-sm-3 ml-md-0 p-3 pl-md-5">
+        <div className="row mt-1">
+            <div className="col-12 col-md-6 ml-sm-3 ml-md-0 px-3 pl-md-5">
                 <h3 className="pt-5">Centro Clínico Dios da el maná</h3>
                 <p><span className="font-weight-bold">Dirección:</span> Av. Paradissi Nº 44 a una casa del Centro Hispano de
                     Villa de Cura - Edo. Aragua</p>
