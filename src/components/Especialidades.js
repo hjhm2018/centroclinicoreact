@@ -22,6 +22,15 @@ const Especialidades = () => {
             <div className="col-12">
                 <h2 className="text-center bg-info text-white rounded p-2">Especialidades</h2>
             </div>
+            <div className="d-none d-md-block mx-auto col-10 text-center mb-2">
+                {especialidades && especialidades.sort(function (a, b) {
+                    return a.nombre.localeCompare(b.nombre);
+                }).map((especialidad, index) => (
+                    index % 2 === 0 ?
+                        <span class="badge badge-info m-1" role="button" onClick={() => setEspecialidadNombre(`${especialidad.nombre.toLowerCase()}`)}>#{especialidad.nombre}</span> :
+                        <span class="badge badge-secondary m-1" role="button" onClick={() => setEspecialidadNombre(`${especialidad.nombre.toLowerCase()}`)}>#{especialidad.nombre}</span>
+                ))}
+            </div>
             <div className="text-center mx-auto col-10">
                 <input type="text" onChange={(e) => setEspecialidadNombre(e.target.value.toLowerCase())} className="rounded text-center"
                     placeholder="Filtrar por especialidad" />
