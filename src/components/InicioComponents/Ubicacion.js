@@ -1,11 +1,14 @@
 import React from 'react';
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaMapMarkedAlt } from "react-icons/fa";
 
 const Ubicacion = () => {
     return (
         <div className="row mt-1">
+            <div className="col-12 mt-2">
+                <h2 className="text-center p-2 m-0 bg-info text-white rounded">Ubicación <FaMapMarkedAlt /></h2>
+            </div>
             <div className="col-12 col-md-6 ml-sm-3 ml-md-0 px-3 pl-md-5">
-                <h3 className="pt-5">Centro Clínico Dios da el maná</h3>
+                <h2 className="pt-5">Centro Clínico Dios da el maná</h2>
                 <p><span className="font-weight-bold">Dirección:</span> Av. Paradissi Nº 44 a una casa del Centro Hispano de
                     Villa de Cura - Edo. Aragua</p>
                 <p><span className="font-weight-bold">Horarios:</span> Lunes a Sábado 8am - 2pm </p>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import especialidades from '../data/especialidades';
-import { Card, Button, Modal } from 'react-bootstrap'
+import { Card, Button, Modal } from 'react-bootstrap';
+import { FaMedkit } from "react-icons/fa";
 
 const Especialidades = () => {
 
@@ -20,7 +21,7 @@ const Especialidades = () => {
     return (
         <div>
             <div className="col-12">
-                <h2 className="text-center bg-info text-white rounded p-2">Especialidades</h2>
+                <h2 className="text-center bg-info text-white rounded p-2">Especialidades <FaMedkit /></h2>
             </div>
             <div className="d-none d-md-block mx-auto col-10 text-center mb-2">
                 {especialidades && especialidades.sort(function (a, b) {
