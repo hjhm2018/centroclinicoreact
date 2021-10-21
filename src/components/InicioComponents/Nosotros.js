@@ -2,12 +2,22 @@ import React from 'react';
 import image from '../../imagenes/nosotros.jpg';
 import { useLocation } from 'react-router-dom';
 import { FaHandshake } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const Nosotros = () => {
     const location = useLocation();
 
     return (
         <div className="row">
+            {
+                location.pathname !== '/' && (
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>Nosotros</title>
+                        <meta name="description" content="Página de Nosotros" />
+                    </Helmet>
+                )
+            }
             <div className="col-12">
                 <h2 className="text-center p-2 mb-2 mb-0 bg-info text-white rounded">Nosotros <FaHandshake /></h2>
             </div>

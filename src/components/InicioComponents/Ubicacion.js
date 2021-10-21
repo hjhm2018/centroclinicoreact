@@ -1,9 +1,23 @@
 import React from 'react';
 import { FaInstagram, FaMapMarkedAlt } from "react-icons/fa";
+import { useLocation } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
 const Ubicacion = () => {
+
+    const location = useLocation();
+
     return (
         <div className="row mt-1">
+            {
+                location.pathname !== '/' && (
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>Ubicación</title>
+                        <meta name="description" content="Página de Ubicación" />
+                    </Helmet>
+                )
+            }
             <div className="col-12 mt-2">
                 <h2 className="text-center p-2 m-0 bg-info text-white rounded">Ubicación <FaMapMarkedAlt /></h2>
             </div>

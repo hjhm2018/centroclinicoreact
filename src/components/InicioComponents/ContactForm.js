@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { FaMailBulk, FaPaperPlane } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const ContactForm = () => {
     const [nombre, setNombre] = useState('');
@@ -11,6 +12,15 @@ const ContactForm = () => {
 
     return (
         <div className="row">
+            {
+                location.pathname !== '/' && (
+                    <Helmet>
+                        <meta charSet="utf-8" />
+                        <title>Contacto</title>
+                        <meta name="description" content="Página de Contacto" />
+                    </Helmet>
+                )
+            }
             <div className="col-12">
                 <h2 className="text-center p-2 m-0 bg-info text-white rounded">Contacto <FaMailBulk /></h2>
             </div>

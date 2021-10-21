@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import especialidades from '../data/especialidades';
 import { Card, Button, Modal } from 'react-bootstrap';
 import { FaMedkit } from "react-icons/fa";
+import { Helmet } from "react-helmet";
+
 
 const Especialidades = () => {
 
@@ -20,6 +22,11 @@ const Especialidades = () => {
 
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Especialidades</title>
+                <meta name="description" content="Página de Especialidades" />
+            </Helmet>
             <div className="col-12">
                 <h2 className="text-center bg-info text-white rounded p-2">Especialidades <FaMedkit /></h2>
             </div>

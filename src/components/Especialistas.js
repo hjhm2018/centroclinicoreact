@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 import especialistas from '../data/especialistas';
 import especialidades from '../data/especialidades';
 import { FaNotesMedical } from "react-icons/fa";
+import { Helmet } from "react-helmet";
 
 const Especialistas = () => {
 
@@ -11,6 +12,11 @@ const Especialistas = () => {
 
     return (
         <div>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Especialistas</title>
+                <meta name="description" content="Página de Especialistas" />
+            </Helmet>
             <div className="col-12">
                 <h2 className="text-center bg-info text-white rounded p-2">Especialistas <FaNotesMedical /></h2>
             </div>
